@@ -21,6 +21,14 @@ namespace KPLMOD5
 
             this.id = random.Next(10000, 99999) ;
 
+            if(username == "")
+
+                throw new NullReferenceException(" Null is not allowed for tittle ");
+
+            if (username.Length > 200)
+
+                throw new Exception(" The maximum length of the text is 100 Characters ");
+
             this.uploadedVideos = new List<WatashiNoBideo>() ;
 
             this.Username = username ;

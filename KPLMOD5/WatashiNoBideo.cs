@@ -25,7 +25,7 @@ namespace KPLMOD5
 
                 throw new NullReferenceException(" Null is not allowed for tittle ") ;
 
-            if (taitoru.Length > 99)
+            if (taitoru.Length > 200)
 
                 throw new Exception(" The maximum length of the text is 100 Characters ") ;
 
@@ -38,6 +38,9 @@ namespace KPLMOD5
 
         public void IncreaseSaiseikaisu(int x)
         {
+            if (x == -1 && x > 25000000)
+
+                throw new NullReferenceException(" Null is not allowed for tittle ") ;
 
             this.Saiseikaisu = x ;
 
